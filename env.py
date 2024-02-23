@@ -79,8 +79,8 @@ class FFSPEnv:
         return init_state, self.reward, self.done, problems_list
 
     def step(self, state, action):
-        action_I = action // self.J
-        action_J = action % self.J
+        action_I = action % self.I
+        action_J = action // self.I
 
         stage_num = state.stage
         able = state.able
